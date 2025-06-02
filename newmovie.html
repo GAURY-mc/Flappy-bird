@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    .header {
+      background-color: #f1f1f1;
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
+
+    .main {
+      width: 100%;
+      padding: 20px;
+    }
+
+    section {
+      padding-top: 60px;
+      min-height: 600px;
+      text-align: center;
+    }
+
+    #trendingmovies { background-color: pink; }
+    #popularshows { background-color: yellow; }
+    #userreviews { background-color: green; }
+    #social { background-color: blue; }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .gallery {
+      margin: 10px;
+      border: 1px solid #ccc;
+      width: 180px;
+      background-color: #f1f1f1;
+    }
+
+    .gallery:hover {
+      border: 1px solid #777;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    pre {
+      font-size: 14px;
+      line-height: 1.2;
+      text-align: left;
+      padding: 10px;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      color: white;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook { background: #3B5998; }
+    .fa-twitter { background: #55ACEE; }
+    .fa-google { background: #dd4b39; }
+    .fa-youtube { background: #bb0000; }
+
+    a {
+      color: black;
+    }
+
+    form {
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <ul>
+    <li><a class="active" href="#trendingmovies">Trending Movies</a></li>
+    <li><a href="#popularshows">Popular Shows</a></li>
+    <li><a href="#userreviews">User Reviews</a></li>
+    <li><a href="#social">Social Media</a></li>
+  </ul>
+
+  <!-- Hero Section -->
+  <div class="header">
+    <h1>Hero Section</h1>
+    <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="50" style="fill:red;">
+        <animate attributeName="cx" begin="0s" dur="10s" from="50" to="1000" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
+
+  <!-- Trending Movies -->
+  <section id="trendingmovies">
+    <h2>Trending Movies</h2>
+    <div class="flex-container">
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Bhool_Bhulaiyaa_2_film_poster.jpg" alt="Bhool">
+        <div class="desc">Bhool</div>
+        <pre>Horror movie. When strangers Reet and Ruhan cross paths, their journey leads to an abandoned mansion and a dreaded spirit who has been trapped for 18 years.</pre>
+      </div>
+
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/75/Chhaava_film_poster.jpg" alt="Chhavva">
+        <div class="desc">Chhavva</div>
+        <pre>After the death of his father, warrior-king Sambhaji Maharaj battles Mughal forces led by Aurangzeb to keep the Maratha Empire alive.</pre>
+      </div>
+
+      <div class="gallery">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzA0NDhiYzQtZTM5NC00OTQ5LThiNDQtNmRiMTk0MGU1ZTYzXkEyXkFqcGc@._V1_.jpg" alt="Mission Majnu">
+        <div class="desc">Mission Majnu</div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://play-lh.googleusercontent.com/proxy/JpB0EVHmh2IKciwOoj_QJHGTAJ-CYblAvA0GpPVLhZV4rjSGchGrkDxTszA-h3LdTw4f4miOBMkOXIcsqgLte0JDrdyHQ-VCBKhpdM_M2N3b6iInjwh0FVPcE_EEoqtgbGIb3X2uX6cF_saV1qVbopZkP8eMY3fj6lthqA" alt="Gunjan Saxena">
+        <div class="desc">Gunjan Saxena</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Shows -->
+  <section id="popularshows">
+    <h2>Popular Shows</h2>
+    <div class="flex-container">
+      <div class="gallery">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTkxNTNhYjktMTcxNy00OTA5LThlY2ItZjM3YTFjYmQ1ZmYzXkEyXkFqcGc@._V1_.jpg" alt="Kapil Sharma">
+        <div class="desc">Kapil Sharma</div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoPbuNDYzE0B2cpkb9AOe2M_Y1zV--5qbG2g&s" alt="Shark Tank">
+        <div class="desc">Shark Tank</div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzM1MmNhMGQtNDliNy00ZDIwLTg1MDQtN2NjZjUyNTg2MGMxXkEyXkFqcGc@._V1_.jpg" alt="Mahabharath">
+        <div class="desc">Mahabharath</div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://cdn1.edgedatg.com/aws/v2/natgeo/RunningWildwithBearGrylls/showimages/cc61d7587396069a43479bc951a7eb4d/454x606-Q80_cc61d7587396069a43479bc951a7eb4d.jpg" alt="Running Wild">
+        <div class="desc">Running Wild</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Reviews -->
+  <section id="userreviews">
+    <h2>User Reviews</h2>
+    <form>
+      <label for="fname">Name:</label><br>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br><br>
+      <label for="review">Review:</label><br>
+      <input type="text" id="review" name="review"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- Social Media -->
+  <section id="social">
+    <h2>Social Media</h2>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-youtube"></a>
+
+    <br><br>
+    <p><b><a href="#">Terms and Conditions</a></b></p>
+    <p><b><a href="#">Privacy Policy</a></b></p>
+    <p><b><a href="#trendingmovies">Back to Top</a></b></p>
+  </section>
+
+</body>
+</html>
